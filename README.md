@@ -67,6 +67,28 @@ public static decimal? ToDecimalNull<T>(this T source)
 ```cs
 var value = "1234.56".ToDecimalNull();
 ```
+### .ToDateNull 转换为可空日期
+- 原型
+```cs
+public static DateTime? ToDateNull<T>(this T source)
+```
+- 返回值
+如果值为null，则返回null
+- 示例
+```cs
+var value = Datatime.Now.ToDateNull();
+```
+### .ToDateNow 转换为日期
+- 原型
+```cs
+public static DateTime ToDateNow<T>(this T source)
+```
+- 返回值
+如果值为null，则返回当前时间
+- 示例
+```cs
+var value = Datatime.Now.ToDateNow();
+```
 ### .ToGuid() 转换为Guid
 - 原型
 ```cs
@@ -256,4 +278,28 @@ public static string ToUpperString(this Guid source)
 - 示例
 ```cs
 var str = "Abc".ToUpper(); // ABC
+```
+### .ToJsonString() DataTable转JSON
+- 原型
+```cs
+public static string ToJsonString(this DataTable source)
+```
+- 返回值
+返回JSON字符串
+- 示例
+```cs
+DataTable data = null;
+var str = data.ToJsonString();
+```
+### .FormatAmount() 格式化金额
+- 原型
+```cs
+public static decimal FormatAmount<T>(this T amount)
+```
+- 返回值
+返回JSON字符串
+- 示例
+```cs
+decimal data = 1213.123;
+var str = data.FormatAmount();//1213.12
 ```
