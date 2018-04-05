@@ -437,30 +437,6 @@ namespace BG.Framework.Utility
         }
 
         /// <summary>
-        /// 根据字符串进行分隔
-        /// </summary>
-        /// <param name="str"></param>
-        /// <param name="splitString"></param>
-        /// <returns></returns>
-        public static string[] Split(this string str, string splitString)
-        {
-            bool flag = str.IsEmpty();
-            string[] result;
-            if (flag)
-            {
-                result = new string[0];
-            }
-            else
-            {
-                result = str.Split(new string[]
-                {
-                    splitString
-                }, StringSplitOptions.None);
-            }
-            return result;
-        }
-
-        /// <summary>
         /// 复制行集合到 Datable
         /// </summary>
         /// <param name="rows"></param>
@@ -668,68 +644,6 @@ namespace BG.Framework.Utility
             else
             {
                 result = default(TValue);
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// 用来代替 Substring
-        /// 因为 Substring 长度不足时会出现异常
-        /// </summary>
-        /// <param name="str"></param>
-        /// <param name="start"></param>
-        /// <param name="length"></param>
-        /// <returns></returns>
-        public static string SubStr(this string str, int start, int length)
-        {
-            bool flag = str == null;
-            string result;
-            if (flag)
-            {
-                result = string.Empty;
-            }
-            else
-            {
-                bool flag2 = start + length <= str.Length;
-                if (flag2)
-                {
-                    result = str.Substring(start, length);
-                }
-                else
-                {
-                    bool flag3 = start > str.Length;
-                    if (flag3)
-                    {
-                        result = string.Empty;
-                    }
-                    else
-                    {
-                        result = str.Substring(start, str.Length - start);
-                    }
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// 用来代替 Substring
-        /// 因为 Substring 长度不足时会出现异常
-        /// </summary>
-        /// <param name="str"></param>
-        /// <param name="start"></param>
-        /// <param name="length"></param>
-        /// <returns></returns>
-        public static string SubStr(this string str, int start)
-        {
-            bool flag = start <= str.Length;
-            string result;
-            if (flag)
-            {
-                result = str.Substring(start);
-            }
-            else
-            {
-                result = string.Empty;
             }
             return result;
         }
