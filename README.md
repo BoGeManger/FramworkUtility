@@ -1,124 +1,124 @@
 # FramworkUtility
-## 后台常用扩展方法
-### .ToStr() 转换为字符串
-- 原型
+## Common background extension method
+### .ToStr() Converts to a string
+- prototype
 ```cs
 public static string ToStr<T>(this T source)
 ```
-- 返回值
-如果为空，返回空字符串(不是null)
-- 示例
+- Return value
+If it is empty, return an empty string (not null)
+- Sample
 ```cs
 var str = tempValue.ToStr();
 ```
 
-### .ToInt() 转换为整数
-- 原型
+### .ToInt() Converts to integers
+- prototype
 ```cs
 public static int ToInt<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回0
-- 示例
+- Return value
+If the conversion fails, return 0
+- Sample
 ```cs
 var value = "1234".ToInt();
 ```
-### .ToIntNull() 转换为可空整数
-- 原型
+### .ToIntNull() Conversion to an empty integer
+- prototype
 ```cs
 public static int? ToIntNull<T>(this T source)
 ```
-- 返回值
-如果值为null，则返回null
-- 示例
+- Return value
+If the value is null, then return to null
+- Sample
 ```cs
 var value = "1234".ToIntNull();
 ```
-### .ToBool() 转换为布尔型
-- 原型
+### .ToBool() Conversion to Boolean
+- prototype
 ```cs
 public static bool ToBool<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回false
-- 示例
+- Return value
+If the conversion fails, return to false
+- Sample
 ```cs
 var value = "True".ToBool();
 ```
-### .ToDecimal() 转换为Decimal
-- 原型
+### .ToDecimal() Conversion to Decimal
+- prototype
 ```cs
 public static decimal ToDecimal<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回0
-- 示例
+- Return value
+If the conversion fails, return 0
+- Sample
 ```cs
 var value = "1234.56".ToDecimal();
 ```
-### .ToDecimalNull() 转换为可空Decimal
-- 原型
+### .ToDecimalNull() Conversion to empty Decimal
+- prototype
 ```cs
 public static decimal? ToDecimalNull<T>(this T source)
 ```
-- 返回值
-如果值为null，则返回null
-- 示例
+- Return value
+If the value is null, then return to null
+- Sample
 ```cs
 var value = "1234.56".ToDecimalNull();
 ```
-### .ToDateNull 转换为可空日期
-- 原型
+### .ToDateNull Conversion to an empty date
+- prototype
 ```cs
 public static DateTime? ToDateNull<T>(this T source)
 ```
-- 返回值
-如果值为null，则返回null
-- 示例
+- Return value
+If the value is null, then return to null
+- Sample
 ```cs
 var value = Datatime.Now.ToDateNull();
 ```
-### .ToDateNow 转换为日期
-- 原型
+### .ToDateNow Convert to date
+- prototype
 ```cs
 public static DateTime ToDateNow<T>(this T source)
 ```
-- 返回值
-如果值为null，则返回当前时间
-- 示例
+- Return value
+If the value is null, the current time is returned.
+- Sample
 ```cs
 var value = Datatime.Now.ToDateNow();
 ```
-### .ToGuid() 转换为Guid
-- 原型
+### .ToGuid() Convert to Guid
+- prototype
 ```cs
 public static Guid ToGuid<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回Guid.Empty
-- 示例
+- Return value
+If the conversion fails, return to Guid.Empty
+- Sample
 ```cs
 var value = "6F9619FF-8B86-D011-B42D-00C04FC964FF".ToGuid();
 ```
-### .ToGuidNull() 转换为可空Guid
-- 原型
+### .ToGuidNull() Conversion to empty Guid
+- prototype
 ```cs
 public static Guid? ToGuidNull<T>(this T source)
 ```
-- 返回值
-如果值为null，则返回null
-- 示例
+- Return value
+If the value is null, then return to null
+- Sample
 ```cs
 var value = "6F9619FF-8B86-D011-B42D-00C04FC964FF".ToGuidNull();
 ```
-### .ToEnum() 转换为枚举
-- 原型
+### .ToEnum() Conversion to enumeration
+- prototype
 ```cs
 public static T ToEnum<T>(this object source)
 ```
-- 返回值
-如果转换失败，default(T)
-- 示例
+- Return value
+If the conversion fails, default (T)
+- Sample
 ```cs
 public enum UpdateType{
 	Add = 1,
@@ -127,178 +127,156 @@ public enum UpdateType{
 }
 var value = "Add".ToEnum<UpdateType>(); 
 ```
-### .FormatString() 格式化字符串
-- 原型
-```cs
-public static string FormatString(this string str, params object[] args)
-```
-- 返回值
-与string.Format()一样
-- 示例
-```cs
-var str = "未输入 {0} 和 {1}".FormatString("公司编号","公司名称");
-```
-### .IsEmpty() 判断字符串是否为空
-- 原型
+### .IsEmpty() Determine whether a string is empty
+- prototype
 ```cs
 public static bool IsEmpty(this string str)
 ```
-- 返回值
-如果为null或空返回true，否则返回false
-- 示例
+- Return value
+Return to false if true is returned for null or null
+- Sample
 ```cs
 var str = 'Test'
 var isEmpty = str.IsEmpty();
 ```
-### .IsId() 判断整数是否是Id（Id大于0）
-- 原型
+### .IsId() Determine if the integer is Id (Id greater than 0)
+- prototype
 ```cs
 public static bool IsId(this int source)
 ```
-- 返回值
-如果值大于零返回true，否则返回false
-- 示例
+- Return value
+Return to false if the value is greater than zero and returns true
+- Sample
 ```cs
 var id = 1;
 if (id.IsId()){
    ...
 }
 ```
-### .EqualsIgnoreCase() 判断字符串是否匹配，忽略大小写
-- 原型
+### .EqualsIgnoreCase() Determine whether strings match, ignore case
+- prototype
 ```cs
 public static bool EqualsIgnoreCase(this string str, string compareStr)
 ```
-- 返回值
-如果忽略大小写匹配，返回true，否则返回false
-- 示例
+- Return value
+If case matching is ignored, true is returned, otherwise false is returned.
+- Sample
 ```cs
 var result = "Abc".EqualsIgnoreCase("ABC");
 ```
-### .IsGuid() 判断字符串是否为Guid
-- 原型
+### .IsGuid() Determine whether the string is Guid
+- prototype
 ```cs
 public static bool IsGuid(this string str)
 ```
-- 返回值
-判断字符串是否为Guid
-- 示例
+- Return value
+Determine whether the string is Guid
+- Sample
 ```cs
 var result = "6F9619FF-8B86-D011-B42D-00C04FC964FF".IsGuid();
 ```
-### .Split() 分割字符串
-- 原型
-```cs
-public static string[] Split(this string str, string splitString)
-```
-- 返回值
-与string.Split一致
-- 示例
-```cs
-var items = "A,B,C".Split(",");
-```
-### .CopyToDataTable() 把DataRow行集合转化为DataTable
-- 原型
+### .CopyToDataTable() DataRow Conversion to  DataTable
+- prototype
 ```cs
 public static DataTable CopyToDataTable(this IEnumerable<DataRow> rows, DataTable table)
 ```
-- 返回值
-返回DataTable
-- 示例
+- Return value
+return DataTable
+- Sample
 ```cs
 var dt = new DataTable();
 // 处理 dl
 var rows = dt.AsEnumerable().Where(c=>!c["Name"].IsEmpty()).ToList();
 var table = rows.CopyToDataTable();
 ```
-### .ToSafeSqlInt() 转换为整数(SQL防注入)
-- 原型
+### .ToSafeSqlInt() Conversion to an integer (SQL anti injection)
+- prototype
 ```cs
 public static int ToSafeSqlInt<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回0
-- 示例
+- Return value
+If the conversion fails, return 0
+- Sample
 ```cs
 var value = "1234".ToInt();
 ```
-### .ToSafeSqlDecimal() 转换为Decimal(SQL防注入)
-- 原型
+### .ToSafeSqlDecimal() Conversion to Decimal (SQL anti injection)
+- prototype
 ```cs
 public static decimal ToSafeSqlDecimal<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回0
-- 示例
+- Return value
+If the conversion fails, return 0
+- Sample
 ```cs
 var value = "1234.56".ToSafeSqlDecimal();
 ```
-### .ToSafeSqlStr() 转换为字符串(SQL防注入)
-- 原型
+### .ToSafeSqlStr() Conversion to string (SQL anti injection)
+- prototype
 ```cs
 public static string ToSafeSqlStr<T>(this T source)
 ```
-- 返回值
-如果值为null或空，返回string.Empty
-- 示例
+- Return value
+If the value is null or empty, return to string.Empty
+- Sample
 ```cs
 var value = "' drop table TestTable;".ToSafeSqlStr();
 ```
-### .ToSafeDateNull() 转换为日期(SQL防注入)
-- 原型
+### .ToSafeDateNull() Conversion to date (SQL anti injection)
+- prototype
 ```cs
 public static DateTime? ToSafeDateNull<T>(this T source)
 ```
-- 返回值
-如果转换失败，返回null
-- 示例
+- Return value
+If the conversion fails, return to null
+- Sample
 ```cs
 var value = "2017-12-31".ToSafeDateNull();
 ```
-### .GetValue() 字典Dictionary获取值
-- 原型
+### .GetValue() Dictionary Dictionary gets the value
+- prototype
 ```cs
 public static TValue GetValue<TKey, TValue>(this Dictionary<TKey, TValue> source, TKey key)
 ```
-- 返回值
-如果key不存在，则返回default(TValue)
-- 示例
+- Return value
+If key does not exist, return to default (TValue)
+- Sample
 ```cs
 var dict = new Dictionary<string,String>();
-//...处理
+//...Handle
 var value = dict.GetValue('TestKey');
 ```
-### .ToUpperString() 转换字符串为大写，常用于Guid转大写等
-- 原型
+### .ToUpperString() Convert string to uppercase, often used in Guid, uppercase and so on.
+- prototype
 ```cs
 public static string ToUpperString(this Guid source)
 ```
-- 返回值
+- Return value
 如果string.ToUpper()
-- 示例
+- Sample
 ```cs
 var str = "Abc".ToUpper(); // ABC
 ```
-### .ToJsonString() DataTable转JSON
-- 原型
+### .ToJsonString() DataTabl Conversion to JSON
+- prototype
 ```cs
 public static string ToJsonString(this DataTable source)
 ```
-- 返回值
-返回JSON字符串
-- 示例
+- Return value
+Return to the JSON string
+- Sample
 ```cs
 DataTable data = null;
 var str = data.ToJsonString();
 ```
-### .FormatAmount() 格式化金额
-- 原型
+### .FormatAmount() Formatted amount
+- prototype
 ```cs
 public static decimal FormatAmount<T>(this T amount)
 ```
-- 返回值
-返回JSON字符串
-- 示例
+- Return value
+Return amount
+- Sample
 ```cs
 decimal data = 1213.123;
 var str = data.FormatAmount();//1213.12
