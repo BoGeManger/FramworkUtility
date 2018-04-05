@@ -1,5 +1,5 @@
-# FramworkUtility
-## Common background extension method
+# FramworkUtility by Nyberg
+## Background data extension
 ### .ToStr() Converts to a string
 - prototype
 ```cs
