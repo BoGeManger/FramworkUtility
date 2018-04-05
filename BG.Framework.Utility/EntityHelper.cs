@@ -9,7 +9,7 @@ namespace BG.Framework.Utility
     public class EntityHelper
     {
         /// <summary>
-        ///用","号分隔忽略属性
+        ///实体拷贝,用","号分隔忽略属性
         /// </summary>
         /// <param name="source">源对象</param>
         /// <param name="target">目标对象</param>
