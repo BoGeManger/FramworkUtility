@@ -1,0 +1,7 @@
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\bin\Debug\BG.Framework.Utility.dll
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\bin\Debug\BG.Framework.Utility.pdb
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\obj\Debug\BG.Framework.Utility.csprojResolveAssemblyReference.cache
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\obj\Debug\BG.Framework.Utility.csproj.CoreCompileInputs.cache
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\obj\Debug\BG.Framework.Utility.csproj.CopyComplete
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\obj\Debug\BG.Framework.Utility.dll
+F:\工作区\个人项目\BG.Framework.Utility\BG.Framework.Utility\obj\Debug\BG.Framework.Utility.pdb
